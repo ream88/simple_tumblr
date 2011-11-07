@@ -67,7 +67,7 @@ post.tags == post[:tags] == post['tags']
 # => true
 ```
 
-`title` (also aliased as `to_s`), `url` and `body` return corresponding data. Calling `link` on link-posts will return the source URL, photo-posts will return the URL of their photo and text-posts will return their Tumblr-URL. This will help you to write clean and easy-to-read views:
+`title` (also aliased as `to_s`), `url` and `body` are aliased logically. Calling `link` on link-posts will return the source URL, photo-posts will return the URL of their photo and text-posts will return their Tumblr-URL. This will help you to write clean and easy-to-read views:
 
 ```erb
 <% blog.posts.each do |post| %>
