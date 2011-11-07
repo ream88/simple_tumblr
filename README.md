@@ -2,8 +2,6 @@
 
 SimpleTumblr's goal is to provide the simplest way to use the [Tumblr API](http://www.tumblr.com/docs/en/api/v2) (read-only). 
 
----
-
 ## Installation
 
 In your `Gemfile`:
@@ -11,8 +9,6 @@ In your `Gemfile`:
 ```ruby
 gem 'simple_tumblr'
 ```
-
----
 
 ## Usage
 
@@ -79,7 +75,6 @@ post.tags == post[:tags] == post['tags']
 <% end %>
 ```
 
-
 ## Contributing to simple_tumblr
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
@@ -89,8 +84,6 @@ post.tags == post[:tags] == post['tags']
 * Commit and push until you are happy with your contribution
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
-
----
 
 ## Copyright
 
