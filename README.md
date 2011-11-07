@@ -4,7 +4,7 @@ SimpleTumblr's goal is to provide the simplest way to use the [Tumblr API](http:
 
 ---
 
-### Installation
+## Installation
 
 In your `Gemfile`:
 
@@ -14,7 +14,7 @@ gem 'simple_tumblr'
 
 ---
 
-### Usage
+## Usage
 
 ```ruby
 blog = SimpleTumblr.new(api_key: '**************************************************', hostname: 'tumblr.mariouher.com')
@@ -26,7 +26,7 @@ blog.posts.each do |post|
 end
 ```
 
-## `ActiveRecord::Relation`-like syntax
+### `ActiveRecord::Relation`-like syntax
 
 You can use `ActiveRecord::Relation`-like syntax to get posts from Tumblr. For example, to receive your last five photos tagged 'instagram' you can chain calls like so:
 
@@ -54,10 +54,10 @@ They are also defined as class methods to enable shortened calls:
 SimpleTumblr.photos(api_key: '**************************************************', hostname: 'tumblr.mariouher.com')
 ```
 
-SimpleTumblr includes `Enumerable`, so you can of course sort the posts, find the min/max and so on. Be sure to check out the 
-[docs](http://ruby-doc.org/core-1.9.3/Enumerable.html) for more info.
+Since SimpleTumblr includes `Enumerable` you can of course sort the posts, find the min/max and even more. Be sure to check out the 
+[`Enumerable` docs](http://ruby-doc.org/core-1.9.3/Enumerable.html) for more info.
  
-## Posts
+### Posts
 
 Each SimpleTumblr call returns a couple of `SimpleTumblr::Post` objects, which are a nice and convenient wrappers for accessing post's data - for more information be sure to read the [Tumblr API](http://www.tumblr.com/docs/en/api/v2):
 
@@ -65,10 +65,11 @@ Each SimpleTumblr call returns a couple of `SimpleTumblr::Post` objects, which a
 post = blog.photos.first
 
 post.tags == post[:tags] == post['tags']
+
 # => true
 ```
 
-`title` (also aliased as `to_s`), `url` and `body` return the logical data. Calling `link` link-posts will return the source URL, photo-posts will return the URL of their photo and text-posts will return their Tumblr-URL. This will help you to write clean and easy-to-read views:
+`title` (also aliased as `to_s`), `url` and `body` return corresponding data. Calling `link` on link-posts will return the source URL, photo-posts will return the URL of their photo and text-posts will return their Tumblr-URL. This will help you to write clean and easy-to-read views:
 
 ```erb
 <% blog.posts.each do |post| %>
@@ -79,7 +80,7 @@ post.tags == post[:tags] == post['tags']
 ```
 
 
-### Contributing to simple_tumblr
+## Contributing to simple_tumblr
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the [issue tracker](https://github.com/haihappen/simple_tumblr/issues) to make sure someone already hasn't requested it and/or contributed it
@@ -91,7 +92,7 @@ post.tags == post[:tags] == post['tags']
 
 ---
 
-### Copyright
+## Copyright
 
 (The MIT license)
 
