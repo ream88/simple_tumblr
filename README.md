@@ -14,23 +14,23 @@ gem 'simple_tumblr'
 
 ```ruby
 blog = SimpleTumblr.new(api_key: '**************************************************', hostname: 'tumblr.mariouher.com')
-```
 
-```ruby
 blog.posts.each do |post|
   puts post.body
 end
 ```
 
-### `ActiveRecord::Relation`-like syntax
+## Features
 
-You can use `ActiveRecord::Relation`-like syntax to get posts from Tumblr. For example, to receive your last five photos tagged 'instagram' you can chain calls like so:
+### Sexy syntax
+
+You can use sexy `ActiveRecord::Relation`-like syntax to get posts from Tumblr. For example, to receive your last five photos tagged 'instagram' you can chain calls like so:
 
 ```ruby
 blog.photos.tag('instagram').limit(5)
 ```
 
-or so:
+or so (random order):
 
 ```ruby
 blog.tag('instagram').limit(5).photos
@@ -42,13 +42,15 @@ or if you dont like this syntax you can do this instead:
 blog.posts(type: 'photo', tag: 'instagram', limit: 5)
 ```
 
-Following scope methods are defined: `text`, `quote`, `link`, `answer`, `video`, `audio`, `photo` and their corresponding plurals. Additional methods are `id`, `limit`, `offset`, `type` and `tag`.
+Following scope methods are defined: `text`, `quote`, `link`, `answer`, `video`, `audio`, `photo` and their corresponding plurals.
 
 They are also defined as class methods to enable shortened calls:
 
 ```ruby
 SimpleTumblr.photos(api_key: '**************************************************', hostname: 'tumblr.mariouher.com')
 ```
+
+Additional scoping methods are `id`, `limit`, `offset`, `type` and `tag`.
 
 Since SimpleTumblr includes `Enumerable` you can of course sort the posts, find the min/max and even more. Be sure to check out the 
 [`Enumerable` docs](http://ruby-doc.org/core-1.9.3/Enumerable.html) for more info.
