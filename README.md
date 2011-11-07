@@ -38,10 +38,10 @@ blog.tag('instagram').limit(5).photos
 blog.posts(type: 'photo', tag: 'instagram', limit: 5)
 ```
 
-Following scope methods are defined: `text`, `quote`, `link`, `answer`, `video`, `audio`, `photo` and their corresponding plurals. They are also defined as class methods to enable shortened calls:
+Following scope methods are defined: `text`, `quote`, `link`, `answer`, `video`, `audio`, `photo` and their corresponding plurals. They are also defined as class methods to enable even shorter calls:
 
 ```ruby
-SimpleTumblr.photos(api_key: '**************************************************', hostname: 'tumblr.mariouher.com')
+SimpleTumblr.photos(api_key: '**************************************************', hostname: 'tumblr.mariouher.com', tag: 'instagram').limit(5)
 ```
 
 Additional scoping methods are `id`, `limit`, `offset`, `type` and `tag`.
