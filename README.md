@@ -22,7 +22,7 @@ end
 
 ## Features
 
-### Sexy syntax
+### Simple Syntax
 
 You can use sexy `ActiveRecord::Relation`-like syntax to get posts from Tumblr. For example, to receive your last five photos tagged 'instagram' you can chain calls like so:
 
@@ -55,7 +55,7 @@ Additional scoping methods are `id`, `limit`, `offset`, `type` and `tag`.
 Since SimpleTumblr includes `Enumerable` you can of course sort the posts, find the min/max and even more. Be sure to check out the 
 [`Enumerable` docs](http://ruby-doc.org/core-1.9.3/Enumerable.html) for more info.
  
-### Posts
+### Simple Wrapper
 
 Each SimpleTumblr call returns a couple of `SimpleTumblr::Post` objects, which are a nice and convenient wrappers for accessing post's data - for more information be sure to read the [Tumblr API](http://www.tumblr.com/docs/en/api/v2):
 
