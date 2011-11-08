@@ -44,7 +44,7 @@ Following scope methods are defined: `text`, `quote`, `link`, `answer`, `video`,
 SimpleTumblr.photos(api_key: '**********', hostname: 'tumblr.mariouher.com', tag: 'instagram', limit: 5)
 ```
 
-Additional scoping methods are `id`, `limit`, `offset`, `type` and `tag`.
+Additional scoping methods are `id`, `limit`, `offset`, `tag` and `type`.
 
 ### Enumerable
 
