@@ -53,7 +53,7 @@ Since SimpleTumblr includes `Enumerable` you can of course sort the posts, find 
  
 ### Simple Wrapper
 
-Each SimpleTumblr call returns a couple of `SimpleTumblr::Post` objects, which are a nice and convenient wrappers for accessing post's data - for more information be sure to read the [Tumblr API](http://www.tumblr.com/docs/en/api/v2):
+Each `SimpleTumblr` call returns a couple of `SimpleTumblr::Post` objects, which are a nice and convenient wrappers for accessing post attributes. These attributes are defined by Tumblr's API and shared across `SimpleTumblr::Post`'s, for a detailed list and more information about them be sure to read the [Tumblr API](http://www.tumblr.com/docs/en/api/v2):
 
 ```ruby
 post = blog.photos.first
