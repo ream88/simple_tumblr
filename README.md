@@ -48,22 +48,25 @@ Additional scoping methods are `id`, `limit`, `offset`, `tag` and `type`.
 
 ### Enumerable
 
-Since SimpleTumblr includes `Enumerable` you can of course sort the posts, find the min/max and even more. Be sure to check out the 
+Since `SimpleTumblr` includes `Enumerable` you can of course sort the posts, find the min/max and even more. Be sure to check out the 
 [`Enumerable` docs](http://ruby-doc.org/core-1.9.3/Enumerable.html) for more info.
  
 ### Simple Wrapper
 
-Each `SimpleTumblr` call returns a couple of `SimpleTumblr::Post` objects, which are a nice and convenient wrappers for accessing post attributes. These attributes are defined by Tumblr's API and shared across `SimpleTumblr::Post`'s, for a detailed list and more information about them be sure to read the [Tumblr API](http://www.tumblr.com/docs/en/api/v2):
+Each `SimpleTumblr` call returns a couple of `SimpleTumblr::Post` objects, which are a nice and convenient wrappers for accessing post attributes. These attributes are defined by Tumblr's API and shared across `SimpleTumblr::Post`'s, for a detailed list and more information about them be sure to read the [Tumblr API](http://www.tumblr.com/docs/en/api/v2). `SimpleTumblr::Post`'s are acting like hashes, you can access attributes using square brackets and a string or symbol as key. Or if you are like me, you will love the option to access them via methods on the `SimpleTumblr::Post` object. See the example below for the usage:
 
 ```ruby
 post = blog.photos.first
 
-post.tags == post[:tags] == post['tags']
-
+post['tags'] == post[:tags] == post.tags
 # => true
 ```
 
-`title` (also aliased as `to_s`), `url` and `body` are aliased logically. Calling `link` on link-posts will return the source URL, photo-posts will return the URL of their photo and text-posts will return their Tumblr-URL. This will help you to write clean and easy-to-read views:
+Following methods – `title` (also aliased as `to_s`), `url` and `body` – are defined to allow you easily iterating through posts in your ERB/HAML/whatever views. 
+
+TODO: Add more information.
+
+Calling `url` on link-posts will return the source URL, photo-posts will return the URL of their photo and text-posts will return their Tumblr-URL. This will help you to write clean and easy-to-read views:
 
 ```erb
 <% blog.posts.each do |post| %>
