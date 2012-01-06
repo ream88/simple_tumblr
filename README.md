@@ -24,17 +24,15 @@ end
 
 ### Simple Syntax
 
-You can use sexy `ActiveRecord::Relation`-like syntax to get posts from Tumblr. For example, to receive your last five photos tagged 'instagram' you can chain calls like so:
+You can use sexy `ActiveRecord::Relation`-like syntax to get posts from Tumblr. For example, to receive your last five photos tagged `'instagram'` you can chain calls like so:
 
 ```ruby
 blog.photos.tag('instagram').limit(5)
 
 # or so (random order):
-
 blog.tag('instagram').limit(5).photos
 
 # or if you dont like this syntax you can do this instead:
-
 blog.posts(type: 'photo', tag: 'instagram', limit: 5)
 ```
 
@@ -48,12 +46,11 @@ Additional scoping methods are `id`, `limit`, `offset`, `tag` and `type`.
 
 ### Enumerable
 
-Since SimpleTumblr includes `Enumerable` you can of course sort the posts, find the minimum or maximum and do even more fancy stuff you can do with Enumerables. Be sure to check out the 
-[Enumerable docs](http://ruby-doc.org/core-1.9.3/Enumerable.html) for more info.
+Since SimpleTumblr includes `Enumerable` you can of course sort the posts, find the minimum or maximum and do even more fancy stuff you can do with Enumerables. Be sure to check out the [Enumerable docs](http://ruby-doc.org/core-1.9.3/Enumerable.html) for more info.
  
 ### Simple Wrapper
 
-Each SimpleTumblr call returns a couple of `SimpleTumblr::Post` objects, which are a nice and convenient wrappers for accessing post attributes. These attributes are defined by Tumblr's API and shared across the post objects, for a detailed list and more information about them be sure to read the [Tumblr API](http://www.tumblr.com/docs/en/api/v2). `SimpleTumblr::Post`'s are acting like hashes, you can access attributes using square brackets and a string or symbol as key. Or if you are like me, you will love the option to access them via methods on the `SimpleTumblr::Post` object. See the example below for the usage:
+Each SimpleTumblr call returns a couple of `SimpleTumblr::Post` objects, which are a nice and convenient wrappers for accessing post attributes. These attributes are defined by Tumblr's API and shared across the post objects, for a detailed list and more information about them be sure to read the [Tumblr API](http://www.tumblr.com/docs/en/api/v2). Since `SimpleTumblr::Post`'s are acting like hashes, you can access attributes using square brackets and a string or symbol as key. Or if you are like me, you will love the option to access them via methods on the `SimpleTumblr::Post` object. See the example below for the usage:
 
 ```ruby
 post = blog.photos.first
@@ -90,7 +87,7 @@ Calling `url` on link-posts will return the source URL, photo-posts will return 
 
 (The MIT license)
 
-Copyright (c) 2011 Mario Uher
+Copyright (c) 2011-2012 Mario Uher
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
