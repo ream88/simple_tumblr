@@ -12,15 +12,17 @@ Gem::Specification.new do |s|
   s.description = 'SimpleTumblr provides a simple – ActiveRecord::Relation like – way to interact with the Tumblr API.'
 
   s.specification_version = 3
-  
+
   s.add_dependency('activesupport', '~> 3.x')
   s.add_dependency('httparty')
-  
+
+  s.add_development_dependency('i18n')
   s.add_development_dependency('minitest')
   s.add_development_dependency('purdytest')
+  s.add_development_dependency('rake')
   s.add_development_dependency('vcr')
   s.add_development_dependency('webmock')
 
-  s.files        = Dir.glob('lib/**/*')
+s.files        = Dir.glob('lib/**/*')
   s.require_path = 'lib'
 end
