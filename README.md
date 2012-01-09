@@ -1,4 +1,4 @@
-# simple_tumblr
+# SimpleTumblr
 
 SimpleTumblr's goal is to provide the simplest way to use the [Tumblr API](http://www.tumblr.com/docs/en/api/v2) (read-only). 
 
