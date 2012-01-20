@@ -2,6 +2,8 @@
 
 SimpleTumblr's goal is to provide the simplest way to use the [Tumblr API](http://www.tumblr.com/docs/en/api/v2) (read-only). 
 
+[![Build Status](https://secure.travis-ci.org/haihappen/simple_tumblr.png)](http://travis-ci.org/haihappen/simple_tumblr)
+
 ## Installation
 
 In your `Gemfile`:
