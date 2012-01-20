@@ -40,10 +40,20 @@ class SimpleTumblr
   end
 
   class << self
-    def method_missing(*args)
-      method, options = args
-
-      new.respond_to?(method) ? new(options).send(method) : super
+    def method_missing(method, *args, &block)
+      instance = new
+      
+      if instance.respond_to?(method)
+        instance.options = args.extract_options!
+        
+        if instance.method(method).arity == 1
+          instance.send(method, args)
+        else
+          instance.send(method)
+        end
+      else
+        super
+      end
     end
   end
 
