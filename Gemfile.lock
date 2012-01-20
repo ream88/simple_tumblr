@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simple_tumblr (0.0.1)
+    simple_tumblr (0.1.0)
       activesupport (~> 3.0)
       httparty
 
@@ -29,6 +29,7 @@ GEM
       crack (>= 0.1.7)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
