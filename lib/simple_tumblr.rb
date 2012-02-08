@@ -33,7 +33,9 @@ class SimpleTumblr
   end
 
   def each(&block)
-    response = self.class.get("/v2/blog/#{self.options.delete(:hostname)}/posts", query: @options)
+    options = self.options.dup
+    
+    response = self.class.get("/v2/blog/#{options.delete(:hostname)}/posts", query: options)
     raise response['meta']['msg'] unless response.success?
 
     response['response']['posts'].map { |data| Post.new(data) }.each(&block)
