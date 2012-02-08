@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency('minitest')
   s.add_development_dependency('purdytest')
-  s.add_development_dependency('rake', '~> 0.8.0')
-  s.add_development_dependency('vcr')
+  s.add_development_dependency('vcr', '2.0.0.rc1')
   s.add_development_dependency('webmock')
 end

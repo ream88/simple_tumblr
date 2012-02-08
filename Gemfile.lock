@@ -8,7 +8,7 @@ PATH
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (3.2.0)
+    activesupport (3.2.1)
       i18n (~> 0.6)
       multi_json (~> 1.0)
     addressable (2.2.6)
@@ -17,13 +17,13 @@ GEM
       multi_json
       multi_xml
     i18n (0.6.0)
-    minitest (2.10.1)
+    minitest (2.11.1)
     multi_json (1.0.4)
     multi_xml (0.4.1)
     purdytest (1.0.0)
       minitest (~> 2.2)
-    rake (0.8.7)
-    vcr (1.11.3)
+    rake (0.9.2.2)
+    vcr (2.0.0.rc1)
     webmock (1.7.10)
       addressable (~> 2.2, > 2.2.5)
       crack (>= 0.1.7)
@@ -35,7 +35,7 @@ PLATFORMS
 DEPENDENCIES
   minitest
   purdytest
-  rake (~> 0.8.0)
+  rake
   simple_tumblr!
-  vcr
+  vcr (= 2.0.0.rc1)
   webmock
